@@ -17,9 +17,9 @@ package wicketforge.util;
 
 import com.intellij.CommonBundle;
 import com.intellij.codeInsight.CodeInsightBundle;
-import com.intellij.ide.fileTemplates.FileTemplate;
-import com.intellij.ide.fileTemplates.FileTemplateManager;
-import com.intellij.ide.fileTemplates.FileTemplateUtil;
+import com.intellij.ide.fileWicketForges.FileWicketForge;
+import com.intellij.ide.fileWicketForges.FileWicketForgeManager;
+import com.intellij.ide.fileWicketForges.FileWicketForgeUtil;
 import com.intellij.ide.util.PackageUtil;
 import com.intellij.openapi.application.ReadAction;
 import com.intellij.openapi.application.Result;
@@ -135,23 +135,23 @@ public final class WicketFileUtil {
      *
      * @param fileName     the name of the file to create
      * @param directory    the directory to create in
-     * @param templateName the Markup Template name
-     * @return the created Element from Template
+     * @param templateName the Markup WicketForge name
+     * @return the created Element from WicketForge
      */
     @Nullable
-    public static PsiElement createFileFromTemplate(@NotNull String fileName, @NotNull PsiDirectory directory, @NotNull String templateName) {
+    public static PsiElement createFileFromWicketForge(@NotNull String fileName, @NotNull PsiDirectory directory, @NotNull String templateName) {
         String errorMessage = RefactoringMessageUtil.checkCanCreateFile(directory, fileName);
         if (errorMessage != null) {
             Messages.showMessageDialog(directory.getProject(), errorMessage, CommonBundle.getErrorTitle(), Messages.getErrorIcon());
             return null;
         }
 
-        final FileTemplate template = FileTemplateManager.getInstance().getJ2eeTemplate(templateName);
+        final FileWicketForge template = FileWicketForgeManager.getInstance().getJ2eeWicketForge(templateName);
 
-        Properties props = FileTemplateManager.getInstance().getDefaultProperties();
+        Properties props = FileWicketForgeManager.getInstance().getDefaultProperties();
         props.put(Constants.PROP_WICKET_NS, WicketVersion.getVersion(directory).getNS());
         try {
-            return FileTemplateUtil.createFromTemplate(template, fileName, props, directory);
+            return FileWicketForgeUtil.createFromWicketForge(template, fileName, props, directory);
         } catch (Exception e) {
             throw new RuntimeException("Unable to create template for '" + fileName + "'", e);
         }

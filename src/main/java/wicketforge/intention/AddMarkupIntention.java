@@ -91,7 +91,7 @@ abstract class AddMarkupIntention implements IntentionAction {
 
             PsiDirectory directory = WicketFileUtil.selectTargetDirectory(psiPackage.getQualifiedName(), project, module);
             if (directory != null) {
-                WicketFileUtil.createFileFromTemplate(getResourceFileName((PsiClass) element), directory, getTemplateName());
+                WicketFileUtil.createFileFromWicketForge(getResourceFileName((PsiClass) element), directory, getWicketForgeName());
             }
         }
     }
@@ -102,7 +102,7 @@ abstract class AddMarkupIntention implements IntentionAction {
     protected abstract String getResourceFileName(@NotNull PsiClass psiClass);
 
     @NotNull
-    protected abstract String getTemplateName();
+    protected abstract String getWicketForgeName();
 
     protected abstract boolean isApplicableForClass(@NotNull PsiClass psiClass);
 }

@@ -33,8 +33,8 @@ import wicketforge.facet.WicketForgeFacet;
 public class WicketActionGroup extends DefaultActionGroup {
     public WicketActionGroup() {
         super("WicketForge", true);
-        getTemplatePresentation().setDescription("Wicket");
-        getTemplatePresentation().setIcon(Constants.WICKET_ICON);
+        getWicketForgePresentation().setDescription("Wicket");
+        getWicketForgePresentation().setIcon(Constants.WICKET_ICON);
     }
 
     @Override

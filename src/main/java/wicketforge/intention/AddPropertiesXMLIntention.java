@@ -19,7 +19,7 @@ import com.intellij.psi.PsiClass;
 import org.jetbrains.annotations.NotNull;
 import wicketforge.Constants;
 import wicketforge.search.PropertiesIndex;
-import wicketforge.templates.WicketTemplates;
+import wicketforge.templates.WicketWicketForges;
 import wicketforge.util.WicketFilenameUtil;
 import wicketforge.util.WicketPsiUtil;
 
@@ -53,8 +53,8 @@ public class AddPropertiesXMLIntention extends AddMarkupIntention {
 
     @NotNull
     @Override
-    protected String getTemplateName() {
-        return WicketTemplates.WICKET_PROPERTIES_XML;
+    protected String getWicketForgeName() {
+        return WicketWicketForges.WICKET_PROPERTIES_XML;
     }
 
     @Override

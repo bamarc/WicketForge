@@ -15,24 +15,24 @@
  */
 package wicketforge.templates;
 
-import com.intellij.ide.fileTemplates.FileTemplateDescriptor;
-import com.intellij.ide.fileTemplates.FileTemplateGroupDescriptor;
-import com.intellij.ide.fileTemplates.FileTemplateGroupDescriptorFactory;
+import com.intellij.ide.fileWicketForges.FileWicketForgeDescriptor;
+import com.intellij.ide.fileWicketForges.FileWicketForgeGroupDescriptor;
+import com.intellij.ide.fileWicketForges.FileWicketForgeGroupDescriptorFactory;
 import wicketforge.Constants;
 
 /**
- * WicketFileTemplateGroupFactory
+ * WicketFileWicketForgeGroupFactory
  */
-public class WicketFileTemplateGroupFactory implements FileTemplateGroupDescriptorFactory, WicketTemplates {
+public class WicketFileWicketForgeGroupFactory implements FileWicketForgeGroupDescriptorFactory, WicketWicketForges {
     
     @Override
-    public FileTemplateGroupDescriptor getFileTemplatesDescriptor() {
-        final FileTemplateGroupDescriptor groupDescriptor = new FileTemplateGroupDescriptor("Wicket", Constants.WICKET_ICON);
-        groupDescriptor.addTemplate(new FileTemplateDescriptor(WICKET_PAGE_HTML));
-        groupDescriptor.addTemplate(new FileTemplateDescriptor(WICKET_PANEL_HTML));
-        groupDescriptor.addTemplate(new FileTemplateDescriptor(WICKET_BORDER_HTML));
-        groupDescriptor.addTemplate(new FileTemplateDescriptor(WICKET_PROPERTIES));
-        groupDescriptor.addTemplate(new FileTemplateDescriptor(WICKET_PROPERTIES_XML));
+    public FileWicketForgeGroupDescriptor getFileWicketForgesDescriptor() {
+        final FileWicketForgeGroupDescriptor groupDescriptor = new FileWicketForgeGroupDescriptor("Wicket", Constants.WICKET_ICON);
+        groupDescriptor.addWicketForge(new FileWicketForgeDescriptor(WICKET_PAGE_HTML));
+        groupDescriptor.addWicketForge(new FileWicketForgeDescriptor(WICKET_PANEL_HTML));
+        groupDescriptor.addWicketForge(new FileWicketForgeDescriptor(WICKET_BORDER_HTML));
+        groupDescriptor.addWicketForge(new FileWicketForgeDescriptor(WICKET_PROPERTIES));
+        groupDescriptor.addWicketForge(new FileWicketForgeDescriptor(WICKET_PROPERTIES_XML));
         return groupDescriptor;
     }
     

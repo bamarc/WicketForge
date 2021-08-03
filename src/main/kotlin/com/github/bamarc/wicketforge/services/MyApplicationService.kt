@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.bamarc.wicketforge.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.bamarc.wicketforge.MyBundle
 
 class MyApplicationService {
 

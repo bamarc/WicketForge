@@ -20,7 +20,7 @@ import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;
 import wicketforge.action.ui.CreatePageDialog;
-import wicketforge.templates.WicketTemplates;
+import wicketforge.templates.WicketWicketForges;
 
 /**
  * CreateWicketPageAction
@@ -34,7 +34,7 @@ public class CreateWicketPageAction extends CreateWicketAction {
     @Override
     @NotNull
     protected PsiElement[] invokeDialog(Project project, PsiDirectory directory) {
-        ActionRunnableImpl actionRunnable = new ActionRunnableImpl(project, directory, WicketTemplates.WICKET_PAGE_HTML);
+        ActionRunnableImpl actionRunnable = new ActionRunnableImpl(project, directory, WicketWicketForges.WICKET_PAGE_HTML);
         CreatePageDialog dialog = new CreatePageDialog(project, actionRunnable, getCommandName(), directory);
         dialog.show();
         return actionRunnable.getCreatedElements();
