@@ -1,40 +1,31 @@
-# WicketForge
+## Summary ##
 
-![Build](https://github.com/bamarc/WicketForge/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+WicketForge is a plugin for [IntelliJ IDEA](http://www.jetbrains.com/idea/) designed to assist developers creating applications using [Apache Wicket](http://wicket.apache.org/).
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the Plugin ID in the above README badges.
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## Installation ##
 
-<!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+Simply install latest release with IDEA's Plugin Manager.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+[ChangeNotes](../../wiki/Change-Notes)
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
-<!-- Plugin description end -->
+## Usage / Help ##
 
-## Installation
+See [Wiki](../../wiki) for features and usage instructions. If you have problems then raise an [Issue](../../issues) or ask for [Help](http://groups.google.com/group/wicketforge).
 
-- Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "WicketForge"</kbd> >
-  <kbd>Install Plugin</kbd>
-  
-- Manually:
+## License ##
 
-  Download the [latest release](https://github.com/bamarc/WicketForge/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+Copyright 2010 The WicketForge-Team
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+http://www.apache.org/licenses/LICENSE-2.0
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+**Notice:** It is not allowed to deploy your own version at jetbrains plugin repository (http://plugins.jetbrains.com/) without permission.
