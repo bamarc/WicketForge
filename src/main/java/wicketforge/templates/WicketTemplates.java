@@ -18,9 +18,9 @@ package wicketforge.templates;
 import org.jetbrains.annotations.NonNls;
 
 /**
- * WicketTemplates
+ * WicketWicketForges
  */
-public interface WicketTemplates {
+public interface WicketWicketForges {
     @NonNls public static final String WICKET_PAGE_HTML = "WicketPage.html";
     @NonNls public static final String WICKET_PANEL_HTML = "WicketPanel.html";
     @NonNls public static final String WICKET_BORDER_HTML = "WicketBorder.html";

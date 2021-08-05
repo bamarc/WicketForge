@@ -2,16 +2,6 @@
 
 # WicketForge Changelog
 
-## [6.0.1]
-### Fixed
-- NoClassDefFoundError in PropertiesIndex.java
-
-### Changed
-- Removed unstable and deprecated API-Calls for IntelliJ IDEA 2021.3
-
-## [6.0.0]
+## [Unreleased]
 ### Added
-- Support for IntelliJ IDEA 2021.2
-
-### Changed
-- Changed build to Gradle Build System
+- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)

@@ -17,7 +17,7 @@ package wicketforge;
 
 import com.intellij.openapi.util.IconLoader;
 import org.jetbrains.annotations.NotNull;
-import wicketforge.templates.WicketTemplates;
+import wicketforge.templates.WicketWicketForges;
 
 import javax.swing.*;
 
@@ -47,7 +47,7 @@ public interface Constants {
     // intension/inspection
     public static final String INTENSION_INSPECTION_GROUPNAME = "Wicket";
 
-    // fileTemplate properties
+    // fileWicketForge properties
     public static final String PROP_WICKET_NS = "WICKET_NS";
 
     // icons
@@ -96,8 +96,8 @@ public interface Constants {
     public static final Icon ICON_CLASS_WEBMARKUPCONTAINER = IconLoader.getIcon("/resources/icons/components/div.png", Constants.class);
 
     enum PropertiesType {
-        PROPERTIES(WicketTemplates.WICKET_PROPERTIES),
-        XML(WicketTemplates.WICKET_PROPERTIES_XML);
+        PROPERTIES(WicketWicketForges.WICKET_PROPERTIES),
+        XML(WicketWicketForges.WICKET_PROPERTIES_XML);
 
         private String templateName;
 
@@ -106,7 +106,7 @@ public interface Constants {
         }
 
         @NotNull
-        public String getTemplateName() {
+        public String getWicketForgeName() {
             return templateName;
         }
     }

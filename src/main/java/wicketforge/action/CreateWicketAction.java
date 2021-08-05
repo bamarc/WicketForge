@@ -102,7 +102,7 @@ abstract class CreateWicketAction extends CreateElementActionBase {
                                     */
 
                                     if (hasMarkup) {
-                                        WicketFileUtil.createFileFromTemplate(WicketFilenameUtil.getMarkupFilename(clazz), markupDirectory, templateName);
+                                        WicketFileUtil.createFileFromWicketForge(WicketFilenameUtil.getMarkupFilename(clazz), markupDirectory, templateName);
                                     }
                                 } catch (IncorrectOperationException e) {
                                     e.printStackTrace();

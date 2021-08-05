@@ -25,7 +25,7 @@
         <framework.detector implementation="wicketforge.facet.WicketForgeFacetType$WicketForgeFacetDetector"/>
         <library.type implementation="wicketforge.library.WicketLibraryType"/>
         <frameworkSupport implementation="wicketforge.facet.WicketFrameworkSupportProvider"/>
-        <fileTemplateGroup implementation="wicketforge.templates.WicketFileTemplateGroupFactory"/>
+        <fileWicketForgeGroup implementation="wicketforge.templates.WicketFileWicketForgeGroupFactory"/>
 
         <completion.contributor language="JAVA" implementationClass="wicketforge.completion.ClassWicketIdCompletionContributor"/>
         <completion.contributor language="JAVA" implementationClass="wicketforge.completion.PropertiesCompletionContributor"/>

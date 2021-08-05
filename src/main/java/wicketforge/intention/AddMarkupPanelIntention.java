@@ -18,7 +18,7 @@ package wicketforge.intention;
 import com.intellij.psi.PsiClass;
 import org.jetbrains.annotations.NotNull;
 import wicketforge.search.MarkupIndex;
-import wicketforge.templates.WicketTemplates;
+import wicketforge.templates.WicketWicketForges;
 import wicketforge.util.WicketFilenameUtil;
 import wicketforge.util.WicketPsiUtil;
 
@@ -52,8 +52,8 @@ public class AddMarkupPanelIntention extends AddMarkupIntention {
 
     @NotNull
     @Override
-    protected String getTemplateName() {
-        return WicketTemplates.WICKET_PANEL_HTML;
+    protected String getWicketForgeName() {
+        return WicketWicketForges.WICKET_PANEL_HTML;
     }
 
     @Override

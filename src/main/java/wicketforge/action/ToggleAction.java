@@ -33,7 +33,7 @@ import org.jetbrains.annotations.Nullable;
 import wicketforge.facet.WicketForgeFacet;
 import wicketforge.search.ClassIndex;
 import wicketforge.search.MarkupIndex;
-import wicketforge.templates.WicketTemplates;
+import wicketforge.templates.WicketWicketForges;
 import wicketforge.util.WicketFileUtil;
 import wicketforge.util.WicketFilenameUtil;
 import wicketforge.util.WicketPsiUtil;
@@ -136,11 +136,11 @@ public class ToggleAction extends AnAction {
 
         String templateName = null;
         if (WicketPsiUtil.isWicketPage(psiClass)) {
-            templateName = WicketTemplates.WICKET_PAGE_HTML;
+            templateName = WicketWicketForges.WICKET_PAGE_HTML;
         } else if (WicketPsiUtil.isWicketPanel(psiClass)) {
-            templateName = WicketTemplates.WICKET_PANEL_HTML;
+            templateName = WicketWicketForges.WICKET_PANEL_HTML;
         } else if (WicketPsiUtil.isWicketBorder(psiClass)) {
-            templateName = WicketTemplates.WICKET_BORDER_HTML;
+            templateName = WicketWicketForges.WICKET_BORDER_HTML;
         }
         if (templateName != null &&
                 Messages.showYesNoDialog(module.getProject(),
@@ -151,7 +151,7 @@ public class ToggleAction extends AnAction {
             PsiDirectory directory = WicketFileUtil.selectTargetDirectory(psiPackage.getQualifiedName(), module.getProject(), module);
             if (directory != null) {
                 // create
-                return WicketFileUtil.createFileFromTemplate(WicketFilenameUtil.getMarkupFilename(psiClass), directory, templateName);
+                return WicketFileUtil.createFileFromWicketForge(WicketFilenameUtil.getMarkupFilename(psiClass), directory, templateName);
             }
         }
         return null;

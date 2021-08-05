@@ -113,7 +113,7 @@ public class ExtractPropertiesAction extends EditorAction {
                             if (selectedItem instanceof ExtractPropertiesDialog.NewPropertiesFileInfo) {
                                 // create new properties file
                                 ExtractPropertiesDialog.NewPropertiesFileInfo newPropertiesFileInfo = (ExtractPropertiesDialog.NewPropertiesFileInfo) selectedItem;
-                                PsiElement element = WicketFileUtil.createFileFromTemplate(newPropertiesFileInfo.getName(), destinationDirectory, newPropertiesFileInfo.getPropertiesType().getTemplateName());
+                                PsiElement element = WicketFileUtil.createFileFromWicketForge(newPropertiesFileInfo.getName(), destinationDirectory, newPropertiesFileInfo.getPropertiesType().getWicketForgeName());
                                 if (element == null) {
                                     Messages.showErrorDialog(project, "Could not create properties file.", "Extract Text");
                                     return false;
