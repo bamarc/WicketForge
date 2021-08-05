@@ -15,41 +15,38 @@
  */
 package wicketforge.codeInsight;
 
-import com.intellij.codeHighlighting.Pass;
-import com.intellij.codeInsight.daemon.GutterIconNavigationHandler;
+import java.util.Arrays;
+
+import javax.swing.Icon;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.codeInsight.daemon.LineMarkerInfo;
-import com.intellij.codeInsight.daemon.impl.GutterIconTooltipHelper;
+import com.intellij.codeInsight.daemon.impl.GutterTooltipHelper;
 import com.intellij.codeInsight.daemon.impl.PsiElementListNavigator;
 import com.intellij.ide.util.DefaultPsiElementCellRenderer;
 import com.intellij.openapi.editor.markup.GutterIconRenderer;
 import com.intellij.psi.NavigatablePsiElement;
 import com.intellij.psi.PsiElement;
 import com.intellij.util.Function;
-import org.jetbrains.annotations.NotNull;
-
-import javax.swing.*;
-import java.awt.event.MouseEvent;
 
 /**
  */
-class NavigableLineMarkerInfo {
+class NavigableLineMarkerInfo<T extends PsiElement> {
     private NavigableLineMarkerInfo() {
     }
 
-    public static LineMarkerInfo create(@NotNull PsiElement element, @NotNull final NavigatablePsiElement[] targets, @NotNull Icon icon) {
-        return new LineMarkerInfo(element, element.getTextRange(), icon, Pass.UPDATE_ALL,
-                new Function<PsiElement, String>() {
-                    @Override
-                    public String fun(PsiElement psiElement) {
-                        return GutterIconTooltipHelper.composeText(targets, "", "{0}");
-                    }
+    public static <T extends PsiElement> LineMarkerInfo<T> create(@NotNull T element, @NotNull final NavigatablePsiElement[] targets, @NotNull Icon icon) {
+        return new LineMarkerInfo<>(
+                element,
+                element.getTextRange(),
+                icon,
+                (Function<PsiElement, String>) psiElement -> {
+                    return GutterTooltipHelper.getTooltipText(Arrays.asList(targets), "", false, null);
+                    //return GutterIconTooltipHelper.composeText(targets, "", "{0}");
                 },
-                new GutterIconNavigationHandler() {
-                    @Override
-                    public void navigate(MouseEvent e, PsiElement elt) {
-                        PsiElementListNavigator.openTargets(e, targets, "Select Target", null, new DefaultPsiElementCellRenderer());
-                    }
-                },
-                GutterIconRenderer.Alignment.LEFT);
+                (e, elt) -> PsiElementListNavigator.openTargets(e, targets, "Select Target", null, new DefaultPsiElementCellRenderer()),
+                GutterIconRenderer.Alignment.LEFT,
+                () -> ""); //TODO: provide a accessible markup provider here
     }
 }

@@ -6,14 +6,6 @@ WicketForge is a plugin for [IntelliJ IDEA](http://www.jetbrains.com/idea/) desi
 
 <!-- Plugin description end -->
 
-## Installation ##
-
-Simply install latest release with IDEA's Plugin Manager.
-
-[ChangeNotes](../../wiki/Change-Notes)
-
-
-
 ## Installation
 
 - Using IDE built-in plugin system:

@@ -2,13 +2,12 @@
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.java</depends>
-    <depends>com.intellij.modules.idea</depends>
+    <depends>com.intellij.properties</depends>
+    <depends>com.intellij.java</depends>
 
 
     <id>WicketForge</id>
     <name>WicketForge</name>
-    <!--<version>5.0.2</version>-->
     <version>6.0.0</version>
     <description>
         <![CDATA[
